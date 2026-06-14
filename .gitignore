@@ -1,0 +1,6 @@
+*.pem
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+results/
+server/aggregated_chunks_bin/
