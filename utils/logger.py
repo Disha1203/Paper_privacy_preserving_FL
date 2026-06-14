@@ -38,7 +38,7 @@ def log_result(client_id, metrics: dict):
         "metrics": metrics
     }
 
-    filepath = os.path.join(RESULTS_PATH, f"{EXPERIMENT_NAME}.jsonl")
+    filepath = os.path.join( RESULTS_PATH, f"{EXPERIMENT_NAME}_seed{SEED}.jsonl")
     with open(filepath, "a") as f:
         f.write(json.dumps(entry) + "\n")
 

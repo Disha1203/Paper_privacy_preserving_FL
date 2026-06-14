@@ -65,4 +65,4 @@ CLIPPING_ENABLED       = True
 #   fl_anon_he | fl_anon_dp | fl_anon_dp_he   ← current
 #   epsilon_sweep | byzantine_attack | mitm_attack
 #   noniid | scalability_2clients | scalability_5clients
-EXPERIMENT_NAME = "fl_anon_dp_he"
+EXPERIMENT_NAME = "fl_anon_dp_he" # includes seed
