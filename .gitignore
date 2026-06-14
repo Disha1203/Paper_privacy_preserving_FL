@@ -5,3 +5,4 @@ __pycache__/
 results/
 server/aggregated_chunks_bin/
 server/received_chunks_bin/
+!results/.gitkeep
