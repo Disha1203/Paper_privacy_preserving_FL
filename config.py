@@ -42,13 +42,13 @@ EARLY_STOPPING_PATIENCE = 25
 BATCH_SIZE              = 32
 
 # ── Differential Privacy ──────────────────────────────────────
-DP_ENABLED       = False
+DP_ENABLED       = True
 NOISE_MULTIPLIER = 1.0
 MAX_GRAD_NORM    = 1.0
 DELTA            = 1e-5
 
 # ── Homomorphic Encryption ────────────────────────────────────
-HE_ENABLED          = False
+HE_ENABLED          = True
 POLY_MODULUS_DEGREE = 8192
 COEFF_MOD_BITS      = [60, 40, 40, 60]
 GLOBAL_SCALE        = 2**40
@@ -65,4 +65,4 @@ CLIPPING_ENABLED       = True
 #   fl_anon_he | fl_anon_dp | fl_anon_dp_he   ← current
 #   epsilon_sweep | byzantine_attack | mitm_attack
 #   noniid | scalability_2clients | scalability_5clients
-EXPERIMENT_NAME = "fl_anon_only" # includes seed
+EXPERIMENT_NAME = "fl_he_dp" # includes seed
