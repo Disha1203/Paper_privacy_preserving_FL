@@ -1,7 +1,7 @@
 import os
 
 # ── Reproducibility ──────────────────────────────────────────
-SEED = 42
+SEED = 456
 
 # ── Paths ─────────────────────────────────────────────────────
 # BASE_PATH is the project root — derived from this file's own location.
@@ -42,7 +42,7 @@ EARLY_STOPPING_PATIENCE = 25
 BATCH_SIZE              = 32
 
 # ── Differential Privacy ──────────────────────────────────────
-DP_ENABLED       = True
+DP_ENABLED       = False
 NOISE_MULTIPLIER = 1.0
 MAX_GRAD_NORM    = 1.0
 DELTA            = 1e-5
@@ -61,8 +61,14 @@ CLIPPING_ENABLED       = True
 
 # ── Experiment Label ──────────────────────────────────────────
 # Change this every time you switch variants. Options:
-#   centralised_baseline | local_only | fl_anon_only
+#   centralized_baseline | local_only | fl_anon_only
 #   fl_anon_he | fl_anon_dp | fl_anon_dp_he   ← current
 #   epsilon_sweep | byzantine_attack | mitm_attack
 #   noniid | scalability_2clients | scalability_5clients
-EXPERIMENT_NAME = "fl_he_dp" # includes seed
+
+# Aggregated gradient file for no-HE runs
+AGGREGATED_GRAD_FILE_RAW = os.path.join(
+    BASE_PATH, "aggregated_gradient_global_raw.pkl"
+)
+
+EXPERIMENT_NAME = "fl_anon_he" # includes seed

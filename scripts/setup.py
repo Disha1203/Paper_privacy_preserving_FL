@@ -43,6 +43,7 @@ def clean_experiment_state():
         "dirs": [
             os.path.join(ROOT, "server", "received_chunks_bin"),
             os.path.join(ROOT, "server", "aggregated_chunks_bin"),
+                    os.path.join(ROOT, "aggregated_gradient_global_raw.pkl"),  
         ],
         "glob_results_pth": ROOT,  # handled separately below
     }
